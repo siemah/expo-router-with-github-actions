@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-navigation",
-    "slug": "expo-navigation",
+    "name": "expo-navigation-with-actions",
+    "slug": "expo-navigation-with-actions",
     "scheme": "exp-nav",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,13 +16,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access camera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -30,10 +37,21 @@
     },
     "plugins": [
       "expo-router",
-      ["expo-barcode-scanner",
+      [
+        "expo-barcode-scanner",
         {
           "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
-        }]
-    ]
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c0d50e51-14cb-44e6-9d39-3b257e240917"
+      }
+    },
+    "owner": "zzenz"
   }
 }
