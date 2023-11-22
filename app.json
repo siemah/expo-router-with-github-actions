@@ -23,7 +23,7 @@
       }
     },
     "android": {
-      "package": "com.zzenz.eas-testing",
+      "package": "com.zzenz.eastesting",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
